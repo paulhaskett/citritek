@@ -1,0 +1,209 @@
+@import "theme/child_theme_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "assets/bootstrap4/bootstrap";                             // <------- Loads Bootstrap4
+@import "assets/understrap/theme/understrap";  // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
+@import "assets/understrap/theme/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you don´t use the corresponding scripts/fonts comment em out
+@import "assets/fontawesome/font-awesome";                           // <------- Font Awesome Icon font
+@import "assets/underscores";                            // <------- Underscores media styles
+
+// Any additional imported files //
+@import "theme/child_theme";                             // <------- Add your styles into this file
+@import "assets/understrap/theme/colors";           // <-------- This creates the necessary bootstrap color classes.
+@import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
+@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+@import "theme/myaccount";
+/* Poppins Google Fonts */
+/* devanagari */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+    unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* Visby Fonts */
+  @font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-LightOblique.eot');
+    src: local('../fonts/Visby CF Light Oblique'), local('VisbyCF-LightOblique'),
+        url('../fonts/VisbyCF-LightOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-LightOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-LightOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-Bold.eot');
+    src: local('../fonts/Visby CF Bold'), local('VisbyCF-Bold'),
+        url('../fonts/VisbyCF-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-Bold.woff2') format('woff2'),
+        url('../fonts/VisbyCF-Bold.woff') format('woff'),
+        url('../fonts/VisbyCF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-Light.eot');
+    src: local('../fonts/Visby CF Light'), local('VisbyCF-Light'),
+        url('../fonts/VisbyCF-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-Light.woff2') format('woff2'),
+        url('../fonts/VisbyCF-Light.woff') format('woff'),
+        url('../fonts/VisbyCF-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF Extra';
+    src: url('../fonts/VisbyCF-ExtraBold.eot');
+    src: local('../fonts/Visby CF Extra Bold'), local('VisbyCF-ExtraBold'),
+        url('../fonts/VisbyCF-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-ExtraBold.woff2') format('woff2'),
+        url('../fonts/VisbyCF-ExtraBold.woff') format('woff'),
+        url('../fonts/VisbyCF-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-BoldOblique.eot');
+    src: local('../fonts/Visby CF Bold Oblique'), local('VisbyCF-BoldOblique'),
+        url('../fonts/VisbyCF-BoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-BoldOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-BoldOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-ThinOblique.eot');
+    src: local('../fonts/Visby CF Thin Oblique'), local('VisbyCF-ThinOblique'),
+        url('../fonts/VisbyCF-ThinOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-ThinOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-ThinOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-ThinOblique.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-Heavy.eot');
+    src: local('../fonts/Visby CF Heavy'), local('VisbyCF-Heavy'),
+        url('../fonts/VisbyCF-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-Heavy.woff2') format('woff2'),
+        url('../fonts/VisbyCF-Heavy.woff') format('woff'),
+        url('../fonts/VisbyCF-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-Thin.eot');
+    src: local('../fonts/Visby CF Thin'), local('VisbyCF-Thin'),
+        url('../fonts/VisbyCF-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-Thin.woff2') format('woff2'),
+        url('../fonts/VisbyCF-Thin.woff') format('woff'),
+        url('../fonts/VisbyCF-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-Medium.eot');
+    src: local('../fonts/Visby CF Medium'), local('VisbyCF-Medium'),
+        url('../fonts/VisbyCF-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-Medium.woff2') format('woff2'),
+        url('../fonts/VisbyCF-Medium.woff') format('woff'),
+        url('../fonts/VisbyCF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-ExtraBoldOblique.eot');
+    src: local('../fonts/Visby CF Extra Bold Oblique'), local('VisbyCF-ExtraBoldOblique'),
+        url('../fonts/VisbyCF-ExtraBoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-ExtraBoldOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-ExtraBoldOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-ExtraBoldOblique.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-MediumOblique.eot');
+    src: local('../fonts/Visby CF Medium Oblique'), local('VisbyCF-MediumOblique'),
+        url('../fonts/VisbyCF-MediumOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-MediumOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-MediumOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Visby CF';
+    src: url('../fonts/VisbyCF-HeavyOblique.eot');
+    src: local('../fonts/Visby CF Heavy Oblique'), local('../fonts/VisbyCF-HeavyOblique'),
+        url('../fonts/VisbyCF-HeavyOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-HeavyOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-HeavyOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-HeavyOblique.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Visby CF Demi';
+    src: url('../fonts/VisbyCF-DemiBold.eot');
+    src: local('../fonts/Visby CF Demi Bold'), local('VisbyCF-DemiBold'),
+        url('../fonts/VisbyCF-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-DemiBold.woff2') format('woff2'),
+        url('../fonts/VisbyCF-DemiBold.woff') format('woff'),
+        url('../fonts/VisbyCF-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visby CF Demi Bold Oblique';
+    src: url('../fonts/VisbyCF-DemiBoldOblique.eot');
+    src: local('../fonts/Visby CF Demi Bold Oblique'), local('VisbyCF-DemiBoldOblique'),
+        url('../fonts/VisbyCF-DemiBoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/VisbyCF-DemiBoldOblique.woff2') format('woff2'),
+        url('../fonts/VisbyCF-DemiBoldOblique.woff') format('woff'),
+        url('../fonts/VisbyCF-DemiBoldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}

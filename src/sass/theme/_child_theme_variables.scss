@@ -1,0 +1,23 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+$white: #ffffff;
+$black: #000000;
+$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: $white;  // Once we've changed the value, we'll also make it the primary brand color.
+$secondary: #da6f1a;
+$enable-shadows: true;
+$enable-gradients: true;
+$navbar-dark-color:  rgba($black, .7);
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow-secondary: 0 .5rem 0.1rem rgba($black, .15);
+$link-color: $black;
+$link-hover-color:   lighten($link-color, 15%);
+$font-family-base: 'Visby CF','Poppins';
+
+
+
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,259 @@
+.shadow{
+    
+    margin: .25 rem;
+    box-shadow: $box-shadow;
+    
+
+}
+/* Just add .fade-in class to element */
+
+.fade-in{
+	animation: fadeIn 1s;
+  	opacity: 1;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+  	opacity: 0;
+  }
+  to {
+ 	opacity: 1;
+  }
+}
+#wrapper-navbar{
+    #main-nav{
+        border-top: 2px solid $secondary;
+        background-color: aqua;
+        ul{
+            li{
+                a{
+                    color: $black;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    background-color: $primary;
+    #wp-custom-header-video-button { display: none; }
+
+    #wp-custom-header {
+        max-width: 100%;
+        overflow: hidden;
+        @include media-breakpoint-up(lg) {height: 330px;}
+        animation: fadeIn 3s;
+        border-bottom: 1px solid $primary;
+        background-color: $primary;
+
+    }
+
+    #player{
+
+        height:600px;
+    }
+
+    #wp-custom-header video {     
+        max-width: 100%; width: 100%; height: auto; 
+    }
+
+    .html5-video-player .video-click-tracking, .html5-video-player .video-stream { 
+        height: auto !important;
+        width: 100% !important;
+        
+    }
+  
+    .wp-custom-header {
+        position: relative;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        @include media-breakpoint-up(md) {height: 330px;}
+        
+        overflow: hidden;
+        
+    }
+
+    .wp-custom-header iframe,  
+    .wp-custom-header object,  
+    .wp-custom-header embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .wp-custom-header iframe, 
+    .wp-custom-header object, 
+    .wp-custom-header embed {
+            max-width: 100%;
+    }
+
+    #wp-custom-header-video-button { position: relative; }
+
+    .alignwide, .alignfull {
+              padding:20px;
+
+    }
+
+}/* end #wrapper-navbar
+
+/* Add vertical breathing room to the full row of columns. */
+@include media-breakpoint-up(md) { 
+    .wp-block-columns {
+        margin: 2rem 0;
+        
+      
+         .alignwide, .column {
+           padding:4rem;
+      
+          }
+          .alignfull{
+              margin: 1rem 0;
+          }
+      } 
+ }
+
+
+
+/* Add horiztonal breathing room between individual columns. */
+.wp-block-column {
+  margin: 10px 20px;
+  
+ 
+}
+
+/* footer */
+#wrapper-footer-full{
+    
+    background-color: $gray-100;
+}
+#wrapper-footer{
+    color: $navbar-dark-color ;
+    background-color: $primary;
+    padding:10px;
+}
+
+.case_study{
+    
+    
+    .entry-content{
+        a{
+
+                text-decoration: none;
+                &:hover, &:focus {
+                
+                text-decoration: none;
+                }
+
+        }
+    }
+    header{
+        
+        
+        text-align: center;
+       
+        
+        a{
+            text-decoration: none;
+            &:hover, &:focus {
+                color:$secondary;
+                text-decoration: none;
+            }
+        }
+    }
+    .wp-post-image{
+
+            border-radius: $border-radius;
+            &:hover, &:focus {
+                border: 4px solid $primary;
+                
+            }
+            
+        }
+
+
+    
+
+
+    
+}
+.hover-effect{
+    
+    border-radius: $border-radius;
+    
+    
+    overflow: hidden;
+    @include transition-ease;
+    img{
+        
+        filter: greyscale(100%);
+        -webkit-filter: grayscale(100%);
+
+        &:hover, &:focus{
+
+            filter: greyscale(0%);
+            -webkit-filter: grayscale(0%);  
+        
+            @include transition-ease;
+
+        }
+
+        
+        
+    
+    }
+
+    
+    
+    
+    
+}
+
+.wp-block-columns{
+    .wp-block-column{
+        
+        .wp-block-image {
+            
+            a{
+                img {
+                    background-color: $primary;
+                    box-shadow: $box-shadow-secondary;
+                    border-radius: 25px;
+                        &:hover{
+                            box-shadow: $box-shadow-sm;
+                            background-color: $gray-100;
+                            transform: scale(0.99,0.99);
+                                                       
+                            @include transition-ease;
+                        }
+                        &:focus-visible{
+                            transform: scale(1.1,1.1);
+                        }
+                    }
+                
+            }
+            figcaption{
+                
+                padding:1rem;
+                margin: 0 auto;
+                font-size: 1.5rem;
+                text-align: center;
+                
+                
+                
+                
+            }
+            
+        }
+        
+    }
+}
+
+
+
