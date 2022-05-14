@@ -148,4 +148,20 @@ add_filter( 'excerpt_length', function($length) {
     return 20;
 }, PHP_INT_MAX );
 
-//custom image block glutenburg
+/**
+ * @snippet       Rename "My Account" Link @ WooCommerce/WP Nav Menu
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 4.5
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+ 
+add_filter( 'wp_nav_menu_items', 'bbloomer_dynamic_menu_item_label', 9999, 2 ); 
+ 
+function bbloomer_dynamic_menu_item_label( $items, $args ) {
+   if ( ! is_user_logged_in() ) { 
+      $items = str_replace( "My Account", "Login", $items ); 
+   } 
+   return $items; 
+}
+

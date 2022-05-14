@@ -14725,6 +14725,19 @@ figure.woocommerce-product-gallery__wrapper {
   opacity: 1;
 }
 
+/* Contact Form 7 Submit Button 
+ -------------------------------*/
+.btn-outline-primary, .wpcf7 input[type=submit] {
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.btn-outline-primary:hover, .wpcf7 input[type=submit]:hover {
+  background: #f8f9fa;
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

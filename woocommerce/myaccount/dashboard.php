@@ -45,7 +45,7 @@ $allowed_html = array(
 	<div class="col-md-6 text-center">
 		<div class="image-overlay">
 			<a href="https://accounts.airthings.com/login" class="btn btn-primary">
-				<img src="http://gti.temp.domains/~citritek/wp-content/uploads/2021/09/IAQ-equipment-dashboard.png" alt="Indoor Air Quality Monitoring">
+				<img src="https://citritek.io/wp-content/uploads/2021/09/IAQ-equipment-dashboard.png" alt="Indoor Air Quality Monitoring">
 			
 			<span class="overlay-text text-center">Login To IAQ</span>
 			</a>
@@ -55,7 +55,7 @@ $allowed_html = array(
 	<div class="col-md-6">
 		<div class="image-overlay">
 				<a href="https://data.citritek.io" class="btn btn-primary">
-					<img src="http://gti.temp.domains/~citritek/wp-content/uploads/2021/09/IAQ-equipment-dashboard.png" alt="Indoor Air Quality Monitoring">
+					<img src="https://citritek.io/wp-content/uploads/2021/09/IAQ-equipment-dashboard.png" alt="Indoor Air Quality Monitoring">
 				
 				<span class="overlay-text text-center">Login To Water Monitoring</span>
 				</a>

@@ -12,6 +12,22 @@
   	opacity: 1;
 }
 
+/* Contact Form 7 Submit Button 
+ -------------------------------*/
+.btn-outline-primary, .wpcf7 input[type="submit"] {
+    color: $black;
+    background: $primary;
+    box-shadow: $box-shadow;
+    &:hover{
+        background: $gray-100;
+        box-shadow: none;
+        @include transition-ease;
+
+    }
+}
+
+
+
 
 
 @keyframes fadeIn {
